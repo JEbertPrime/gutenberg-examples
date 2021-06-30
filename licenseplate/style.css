@@ -120,9 +120,7 @@ body {
   margin-bottom: 48px;
 }
 
-.section .narrow {
-  
-}
+
 
 /*Card*/
 .section .card {
@@ -228,6 +226,7 @@ body {
 .header {
   background-color: #fff;
   padding: 16px 0;
+  border-bottom: 1px solid lightgrey;
 }
 
 .header .navbar-toggler {
@@ -819,3 +818,4 @@ width:100px;
     margin-top: 0;
   } 
 }
+

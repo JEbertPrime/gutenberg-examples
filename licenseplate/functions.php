@@ -195,3 +195,10 @@ function licenseplate_widgets_init() {
   );
 }
 add_action( 'widgets_init', 'licenseplate_widgets_init' );
+function cc_mime_types($mimes) {
+  $mimes['json'] = 'text/plain';
+  $mimes['geojson'] = 'text/plain';
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');

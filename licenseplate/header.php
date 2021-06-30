@@ -15,6 +15,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel='preload' href='/wp-content/uploads/2021/06/layer_0.png' as='image'/>
+    <link rel='preload' href='/wp-content/uploads/2021/06/layer_1.png' as='image'/>
+    <link rel='preload' href='/wp-content/uploads/2021/06/layer_2.png' as='image'/>
+  <link rel='preload' href='/wp-content/uploads/2021/06/layer_3.png' as='image'/>
+  <link rel='preload' href='/wp-content/uploads/2021/06/layer_4.png' as='image'/>
+  <link rel='preload' href='/wp-content/uploads/2021/06/layer_5.png' as='image'/>
+  <link rel='preload' href='/wp-content/uploads/2021/06/layer_6.png' as='image'/>
 
     <title><?php wp_title( '|', true, 'right' ); ?></title>
 
@@ -29,7 +36,7 @@
   <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
 
-    <div class="header fixed-top shadow">
+    <div class="header fixed-top ">
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
           <div class="left">

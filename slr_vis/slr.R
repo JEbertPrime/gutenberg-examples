@@ -1,0 +1,11 @@
+library('sf')
+library('rgdal')
+dsn <-'GA_slr_final_dist.gdb'
+sf::st_layers(dsn=dsn)
+layer_0 <- sf::st_make_valid(sf::st_read(dsn=dsn, layer='GA_slr_0ft'))
+layer_1 <-  sf::st_make_valid(sf::st_read(dsn=dsn, layer='GA_slr_1ft'))
+layer_2 <-  sf::st_make_valid(sf::st_read(dsn=dsn, layer='GA_slr_2ft'))
+layer_3 <-  sf::st_make_valid(sf::st_read(dsn=dsn, layer='GA_slr_3ft'))
+layer_4 <-  sf::st_make_valid(sf::st_read(dsn=dsn, layer='GA_slr_4ft'))
+layer_5 <-  sf::st_make_valid(sf::st_read(dsn=dsn, layer='GA_slr_5ft'))
+layer_6 <-  sf::st_make_valid(sf::st_read(dsn=dsn, layer='GA_slr_6ft'))
