@@ -819,3 +819,114 @@ width:100px;
   } 
 }
 
+.slr-graphic::after{
+  position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
+  content: url(assets/images/layer_0.png) url(assets/images/layer_1.png) url(assets/images/layer_2.png) url(assets/images/layer_3.png) url(assets/images/layer_4.png) url(assets/images/layer_5.png) url(assets/images/layer_6.png);
+}
+.bird {
+	background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);
+	background-size: auto 100%;
+	width: 88px;
+	height: 125px;
+	will-change: background-position;
+	
+	animation-name: fly-cycle;
+	animation-timing-function: steps(10);
+	animation-iteration-count: infinite;
+
+	
+
+}
+.bird--one {
+  animation-duration: 1s;
+  animation-delay: -0.5s;		
+}
+
+
+
+.bird-container {
+	position: absolute;
+	top: 40%;
+	left: -10%;
+	transform: scale(0) translateX(-10vw);
+	will-change: transform;
+	
+	animation-name: fly-right-one;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	
+	
+	
+
+}
+.bird-container--one {
+  animation-duration: 15s;
+  animation-delay: 0;
+}
+@keyframes fly-cycle {
+	
+	100% {
+		background-position: -900px 0;
+	}
+	
+}
+
+@keyframes fly-right-one {
+	
+	0% {
+		transform: scale(0.3) translateX(-10vw);
+	}
+	
+	15% {
+		transform: translateY(2vh) translateX(10vw) scale(0.4);
+	}
+	
+	30% {
+		transform: translateY(0vh) translateX(30vw) scale(0.5);
+	}
+	
+	45% {
+		transform: translateY(4vh) translateX(50vw) scale(0.6);
+	}
+	
+	60% {
+		transform: translateY(2vh) translateX(70vw) scale(0.6);
+	}
+	
+	75% {
+		transform: translateY(0vh) translateX(90vw) scale(0.6);
+	}
+	
+	90% {
+		transform: translateY(0vh) translateX(110vw) scale(0.6);
+	}
+  100%{
+    transform: translateY(0vh) translateX(110vw) scale(0.6);
+
+  }
+	
+	
+	
+}
+
+
+	
+}
+.animation-container {
+	z-index: 1;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 35rem;
+	background-blend-mode: soft-light;
+	background-size: cover;
+	background-position: center center;
+	padding: 2rem;
+}
+.vranger {
+  margin-top: 50px;
+   transform: rotate(270deg);
+  -moz-transform: rotate(270deg); /*do same for other browsers if required*/
+}

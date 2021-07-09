@@ -1,0 +1,32 @@
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+self["webpackHotUpdateminimal_react_webpack_babel_setup"]("main",{
+
+/***/ "./src/components/SLRScroller.jsx":
+/*!****************************************!*\
+  !*** ./src/components/SLRScroller.jsx ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ SLRScroller)\n/* harmony export */ });\n/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reactstrap */ \"./node_modules/reactstrap/es/Row.js\");\n/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! reactstrap */ \"./node_modules/reactstrap/es/Col.js\");\n/* harmony import */ var react_scrollmagic__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-scrollmagic */ \"./node_modules/react-scrollmagic/dist/index.es.js\");\n/* harmony import */ var react_gsap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-gsap */ \"./node_modules/react-gsap/dist/react-gsap.esm.js\");\n/* harmony import */ var _SLRGraphic_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SLRGraphic.jsx */ \"./src/components/SLRGraphic.jsx\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! styled-components */ \"./node_modules/styled-components/dist/styled-components.browser.esm.js\");\nvar _templateObject, _templateObject2;\n\nfunction _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }\n\nfunction _nonIterableRest() { throw new TypeError(\"Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); }\n\nfunction _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === \"string\") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === \"Object\" && o.constructor) n = o.constructor.name; if (n === \"Map\" || n === \"Set\") return Array.from(o); if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }\n\nfunction _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }\n\nfunction _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== \"undefined\" && arr[Symbol.iterator] || arr[\"@@iterator\"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i[\"return\"] != null) _i[\"return\"](); } finally { if (_d) throw _e; } } return _arr; }\n\nfunction _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }\n\nfunction _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }\n\n\n\n\n\n\n\nvar ScrollItem = styled_components__WEBPACK_IMPORTED_MODULE_4__.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral([\"\\n  text-align: center;\\n  top: \", \"px;\\n  left: 0;\\n  bottom: 0;\\n  right: 0;\\n  margin: auto;\\n  position: absolute;\\n  opacity: 0;\\n\"])), function (props) {\n  return props.top - 50;\n});\nvar ScrollItemBox = styled_components__WEBPACK_IMPORTED_MODULE_4__.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral([\"\\n  background: rgba(255, 255, 255, 0.6);\\n  padding: 2rem 2rem 1rem 2rem;\\n  width: max-content;\\n  max-width: calc(99vw - 2rem);\\n  margin: auto;\\n\"])));\nfunction SLRScroller(props) {\n  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_3__.useState)(0),\n      _useState2 = _slicedToArray(_useState, 2),\n      level = _useState2[0],\n      setLevel = _useState2[1];\n\n  (0,react__WEBPACK_IMPORTED_MODULE_3__.useEffect)(function () {\n    var riseOceans = setInterval(function () {\n      setLevel(level + 1);\n    }, 1000);\n    return function () {\n      return clearInterval(riseOceans);\n    };\n  });\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(react__WEBPACK_IMPORTED_MODULE_3__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__.default, {\n    style: {\n      backgroundImage: \"url(http://localhost:8000/wp-content/uploads/2021/07/layer_\".concat(level % 6, \".png\"),\n      backgroundSize: 'cover',\n      height: 'calc(100vh - 99px)',\n      backgroundPosition: 'center',\n      backgroundColor: '#227c9d'\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__.default, {\n    style: {\n      padding: '0px'\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(\"p\", null, \"Coastal Georgia has seen nearly one foot of sea level rise since 1935.  \")))));\n}\n\n//# sourceURL=webpack://minimal-react-webpack-babel-setup/./src/components/SLRScroller.jsx?");
+
+/***/ })
+
+},
+/******/ function(__webpack_require__) { // webpackRuntimeModules
+/******/ "use strict";
+/******/ 
+/******/ /* webpack/runtime/getFullHash */
+/******/ (() => {
+/******/ 	__webpack_require__.h = () => ("119646d87e4f89c95b24")
+/******/ })();
+/******/ 
+/******/ }
+);
