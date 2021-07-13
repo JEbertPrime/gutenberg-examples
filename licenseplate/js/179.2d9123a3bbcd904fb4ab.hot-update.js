@@ -1,1 +1,0 @@
-self.webpackHotUpdateminimal_react_webpack_babel_setup(179,{187:(e,t,c)=>{"use strict";c.d(t,{Z:()=>a});var n=c(294);const a=function(e){return e.title,n.createElement("div",null,"dog")}}},(function(e){"use strict";e.h=()=>"00f7d56240b7e01e551c"}));
