@@ -1,44 +1,59 @@
 import { __ } from '@wordpress/i18n';
 import { registerBlockType } from '@wordpress/blocks';
-import { RichText } from '@wordpress/block-editor';
+import { Button } from '@wordpress/components';
+
+import {
+	RichText,
+	AlignmentToolbar,
+	BlockControls,
+	MediaUpload, MediaUploadCheck 
+} from '@wordpress/block-editor';
+const ALLOWED_MEDIA_TYPES = [ 'image' ];
 
 registerBlockType( 'gutenberg-examples/example-03-editable-esnext', {
 	title: __( 'Example: Editable (ESNext)', 'gutenberg-examples' ),
 	icon: 'universal-access-alt',
 	category: 'layout',
 	attributes: {
-		content: {
-			type: 'array',
-			source: 'children',
-			selector: 'p',
+		background: {
+			type: 'string',
+			source: 'attribute',
+			selector: '#inner',
+			attribute: 'style',
+			default:{backgroundImage:''}
 		},
 	},
 	example: {
 		attributes: {
-			content: __( 'Hello world' ),
+			background: __( {background:'blue'} ),
 		},
 	},
-	edit: ( props ) => {
-		const {
-			attributes: { content },
-			setAttributes,
-			className,
-		} = props;
-		const onChangeContent = ( newContent ) => {
-			setAttributes( { content: newContent } );
+	edit: ( {attributes, setAttributes} ) => {
+		
+		const onChangeBackground = ( newBackground ) => {
+			setAttributes( { background: newBackground } );
 		};
 		return (
-			<RichText
-				tagName="p"
-				className={ className }
-				onChange={ onChangeContent }
-				value={ content }
+			<div>
+			<BlockControls></BlockControls>
+			<div id='inner' style={{height:'calc(99vh - 100px)', ...attributes.background}} ><MediaUploadCheck>
+			<MediaUpload
+				onSelect={ ( media ) =>
+					onChangeBackground( {backgroundImage: 'url(' + media.url + ')'} )
+				}
+				allowedTypes={ ALLOWED_MEDIA_TYPES }
+				render={ ( { open } ) => (
+					<Button onClick={ open }>Open Media Library</Button>
+				) }
 			/>
+		</MediaUploadCheck></div>
+			</div>
 		);
 	},
 	save: ( props ) => {
 		return (
-			<RichText.Content tagName="p" value={ props.attributes.content } />
+			<div style={{height:'calc(99vh - 100px)', ...props.attributes.background}} >
+			</div>
 		);
 	},
 } );
