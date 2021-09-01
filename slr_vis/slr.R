@@ -42,7 +42,7 @@ for(layer in layers){
       legend.background = element_rect(fill = "transparent", colour = NA),
       legend.box.background = element_rect(fill = "transparent", colour = NA)
     )
-  ggsave(paste('layer_', i, '.png', sep=''), bg='transparent')
+  ggsave(paste('layer_', i, '.png', sep=''), bg='transparent', width=700, units='px')
   i<- i + 1
 }
 
@@ -60,4 +60,18 @@ for(layer in layers){
      legend.background = element_rect(fill = "transparent", colour = NA),
      legend.box.background = element_rect(fill = "transparent", colour = NA)
    )
+ ggplot() +
+   geom_sf(data=states,fill="#152238", colour = "white")+
+   geom_sf(data=savannah_roads,fill="#152238", colour = "white")+
+   geom_sf(data=bryan_roads,fill="#152238", colour = "white")+
+   geom_sf( data=layer_1,fill=alpha('#227c9d',1), color=NA) +
+   coord_sf(xlim=c(-81.34, -80.7), ylim=c(31.8,32.1)) +
+   theme_void() + # Empty theme without axis lines and texts
+   theme(
+     panel.background = element_rect(fill = "transparent", colour = NA),
+     plot.background = element_rect(fill = "transparent", colour = NA),
+     legend.background = element_rect(fill = "transparent", colour = NA),
+     legend.box.background = element_rect(fill = "transparent", colour = NA)
+   )
+ ggsave(paste('layer_', 1, '.png', sep=''), bg='transparent', width=10, units='in', dpi='screen')
  

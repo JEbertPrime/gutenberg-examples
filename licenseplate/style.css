@@ -11,7 +11,10 @@ body {
   margin: 0;
   font-weight: 400;
 }
+.home{
+  overflow-x:hidden;
 
+}
 .btn:focus {
   box-shadow: none !important;
 }
