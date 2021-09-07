@@ -12,7 +12,6 @@ body {
   font-weight: 400;
 }
 .home{
-  overflow-x:hidden;
 
 }
 .btn:focus {
@@ -228,7 +227,6 @@ body {
 /*Header*/
 .header {
   background-color: #fff;
-  padding: 16px 0;
   border-bottom: 1px solid lightgrey;
 }
 
@@ -780,6 +778,9 @@ width:100px;
 .home .hero {
   background-color: #636466;
   font-family: 'Open Sans', sans-serif;
+}
+.home p{
+  font-size: larger;
 }
 
 .home .hero figure {
