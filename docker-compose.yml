@@ -17,8 +17,8 @@ services:
       - db
     image: wordpress:latest
     volumes:
-      - ./gutenberg:/var/www/html/wp-content/plugins/gutenberg-example
-      - ./licenseplate:/var/www/html/wp-content/themes/licenseplate
+      - ./image-accordion:/var/www/html/wp-content/plugins/image-accordion
+      - ./licenseplate-2021:/var/www/html/wp-content/themes/licenseplate
     ports:
       - "8000:80"
     restart: always
