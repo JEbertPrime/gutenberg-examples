@@ -1,3 +1,4 @@
 node_modules
 *.RData
 *hot-update*
+*.shp
